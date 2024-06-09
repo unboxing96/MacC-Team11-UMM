@@ -1,5 +1,123 @@
-# MacC-Team11-UMM
-Macro Challenge, Team 11, UMM, Morning, 2023
+# 노마드월렛 NomadWallet
+![nomadwallet](https://github.com/unboxing96/NomadWallet/assets/102353544/75f4b3c2-b648-44f6-84c0-5e6466a8a2c7)
+
+### 🎉 앱스토어 출시 완료
+https://apps.apple.com/ca/app/id6470182505
+
+</br>
+
+### 📈 앱스토어 관련 데이터 (2024.06.09 update)
+- 다운로드 횟수: 489회
+- 다운로드 전환율: 17.2%
+- 리뷰 수: 13개
+- 별점 평균: 4.9
+
+</br>
+
+### ✈️ 음성으로 기록하는 해외여행 가계부
+노마드월렛은 해외 배낭여행자를 위한 가계부 iOS 앱입니다. </br>
+여행 중 소비가 발생하자마자 까먹기 전에 음성 메모를 남기듯 `무엇을`, `얼마에`, `어떻게` 결제했는지만 말하면 알아서 가계부에 정리해줍니다.
+음성 인식으로 `기록`된 지출 내역의 카테고리를 AI로 `분류`하고, 여러 국가와 도시를 옮겨다녀도 GPS로 위치를 파악해 원화로 `계산`해줍니다.
+노마드월렛과 함께라면 소비 기록의 부담을 내려놓고 여행의 소중한 순간을 만끽할 수 있습니다.
+
+</br>
+
+### 📆 개발 기간
+2023.09.04 ~ 2023.12.18
+
+</br>
+
+### 👥 팀원
+<img src="https://github.com/unboxing96/NomadWallet/assets/102353544/664788de-b3ad-4778-b7af-19f7c77993ca" width="800">
+
+</br>
+</br>
+</br>
+
+## 1. Development Environment ⚙️
+`iOS 16.0` `Xcode 15.0`
+
+</br>
+
+## 2. Tech Stack ⚒️
+- 언어: `Swift`
+- 프레임워크: `SwiftUI`
+- 아키텍처: `MVVM`
+- 동시성: `GCD`, `async / await`
+- 데이터베이스: `Core Data`
+- 음성 인식: `Speech`
+- 카테고리 분류: `CreateML`
+- 위치: `Core Location`
+- 환율: `Exchange API`
+- 코드 품질 관리 도구: `SwiftLint`
+
+</br>
+
+## 3. 화면 구성
+|Travel|Record|Expense|
+|---|---|---|
+|![travel_2x](https://github.com/unboxing96/NomadWallet/assets/102353544/e99cdb4e-6397-46c8-b6da-09770544112e)|![record_2x](https://github.com/unboxing96/NomadWallet/assets/102353544/33d49e0f-62ec-4fba-b2eb-7d09fc9b19b6)|![expense_2x](https://github.com/unboxing96/NomadWallet/assets/102353544/549ac06d-eed5-4acf-9869-a4df74559687)|
+
+</br>
+
+## 4. 기능 요약
+- `Travel`
+  - 여행 일정 생성 / 삭제
+  - 커스텀 캘린더로 일정 선택
+  - 지난 여행 / 다가오는 여행 조회
+  - 임시 지출 기록을 특정 여행에 할당 가능
+ 
+- `Record`
+  - 음성 인식으로 입력된 문자열 처리
+    - 처리된 정보를 바탕, ML 활용하여 카테고리 분류
+    - 처리된 정보를 바탕, 시각 / 위치 / 환율 / 음성파일 자동 저장
+  - 정보 수기 입력 가능
+  - 입력된 정보 수정 가능
+ 
+- `Expense`
+  - 기록된 정보를 그래프로 표현
+  - 여행 / 국가 / 결제수단 별로 정보 필터링
+  - 저장된 소비 기록 조회 / 수정 / 삭제
+  - 저장된 소비 기록 .CSV 파일로 내보내기
+    - 결제 인원 별로 자동 정산 기능
+
+</br>
+
+## 5. 업데이트 내역
+`1.0.0` 출시 </br>
+`1.1.0` 실시간 환율 정보 반영, 소비 기록 삭제 기능 추가 </br>
+`1.1.1` 버그 수정 </br>
+`1.1.2` 버그 수정 </br>
+`1.2.0` CSV 내보내기 기능 추가 </br>
+`1.2.1` API KEY 업데이트 </br>
+
+</br>
+
+## 6. Folder Structure
+
+```
+├── UMM
+│   ├── DesignSystem
+│   │   └── Fonts
+│   ├── Extension
+│   ├── Handler
+│   ├── Model
+│   │   └── Enumeration
+│   ├── Protocol
+│   ├── Utils
+│   ├── View
+│   │   ├── Expense
+│   │   ├── Modal
+│   │   ├── Other
+│   │   ├── Record
+│   │   └── Travel
+│   └── ViewModel
+└── UMM.xcworkspace
+     └── xcshareddata
+```
+
+</br>
+</br>
 
 # 팀 개발자들을 위한 Git, Code Convention
 
